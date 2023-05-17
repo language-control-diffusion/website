@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Control Diffusion: Efficiently Generalizing through Space, Time, and Tasks</title>
+
+
+
+  <!-- custom fonts -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
+  <!-- end custom fonts -->
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="ico" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Language Control Diffusion: Efficiently Generalizing through Space,
+              Time, and Tasks</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Anonymous Authors</a>
+              </span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Affitilation</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://github.com/language-control-diffusion/code"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://github.com/language-control-diffusion/data"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/LCD.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">lcd</span> scales diffusion models for long horizon and language conditioned planning.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+   
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Training generalist agents is difficult across several axes, requiring us to deal with high dimensional
+              inputs (space), long horizons (time), and multiple and new tasks. Recent advances with architectures have
+              allowed for improved scaling along one or two of these dimensions, but are still prohibitive
+              computationally. In this paper, we propose to address all three axes by leveraging Language to Control
+              Diffusion models as a hierarchical planner conditioned on language <span class="dnerf">lcd</span>.
+            </p>
+            <p>
+              We effectively and efficiently scale diffusion models for planning in extended temporal, state, and task
+              dimensions to tackle long
+              horizon control problems conditioned on natural language instructions. We compare LCD with other
+              state-of-the-art models on the CALVIN language robotics benchmark and find that LCD outperforms other
+              SOTA methods in multi task success rates while dramatically improving computational efficiency with a
+              single task success rate (SR) of <strong>88.7%</strong> against the previous best of
+              <strong>82.7%</strong>.
+            </p>
+            <p>
+              We show that LCD can successfully
+              leverage the unique strength of diffusion models to produce coherent long range plans while addressing
+              their weakness at generating low-level details and contro
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <video id="lift" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/lift_red_block_slider_diffusion.mp4" type="video/mp4">
+          </video>
+          <video id="move" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/move_slider_right_diffusion.mp4" type="video/mp4">
+          </video>
+          <video id="place" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/place_in_slider_diffusion.mp4" type="video/mp4">
+          </video>
+          <video id="rotate" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/rotate_blue_block_right_diffusion.mp4" type="video/mp4">
+          </video>
+          <video id="turn" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/turn_off_lightbulb_diffusion.mp4" type="video/mp4">
+          </video>
+
+        </div>
+      </div>
+      <!--/ Paper video. -->
+      <div style="height: 100px;"></div>
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3">Efficient Training & Inference</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <img style="width: 800px" src="./static/images/chart.svg" alt="chart">
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+    
+
+
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Related Work</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              This project is built on some exceptional prior work.
+
+            </p>
+            <p>
+              <a href="https://diffusion-planning.github.io/">Planning with Diffusion for Flexible Behavior
+                Synthesis</a> introduces the base diffusion-based planning model that we adopt as the
+              high-level policy.
+            </p>
+            <p>
+              <a href="http://calvin.cs.uni-freiburg.de/">CALVIN</a>
+              provides the dataset and benchmark for evaluating the performance of our agent.
+            </p>
+            <p>
+              Finally, <a href="http://hulc.cs.uni-freiburg.de/">HULC</a> offers a strong baseline policy that
+              we use
+              for comparison and as our low-level controller.,
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Concurrent Work. -->
+
+    </div>
+  </section>
+
+  <!--/ Animation. -->
+
+
+  </div>
+  </section>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Get Started</h2>
+      <pre><code>$ git clone git@github.com:language-control-diffusion/language-control-diffusion.git 
+$ make install && conda activate lcd
+$ lcd                                                                                             
+ Usage: lcd [OPTIONS] COMMAND [ARGS]...                                                      
+                                                                                             
+╭─ Options ─────────────────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell.                   │
+│ --show-completion             Show completion for the current shell, to copy it or        │
+│                               customize the installation.                                 │
+│ --help                        Show this message and exit.                                 │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ────────────────────────────────────────────────────────────────────────────────╮
+│ rollout        Rollout in the environment for evaluation or dataset collection            │
+│ train_hulc     Train the original hulc model                                              │
+│ train_lcd      Train the original hulc model                                              │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+</code></pre>
+    </div>
+  </section>
+
+
+  
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p style="text-align: center
+            ">
+              Website templated borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
